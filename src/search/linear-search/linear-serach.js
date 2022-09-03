@@ -1,4 +1,4 @@
-const Search = ({ value, data }) => {
+const Search = ({ data, value }) => {
 	if (!data || !(data instanceof Object)) {
 		return Error('search not suppported');
 	}
@@ -22,6 +22,39 @@ const Search = ({ value, data }) => {
 	}
 };
 
+const indexOf = ({ data, value }) => {
+	if (!data || !data.length) {
+		return Error('No data found');
+	}
+
+	const dataArray = typeof data === 'string' ? data.split('') : data;
+
+	for (let index = 0; index < dataArray.length; index++) {
+		if (dataArray[index] === value) {
+			return index;
+		}
+	}
+
+	return -1;
+};
+
+const includes = ({ data, value }) => {
+	if (!data || !data.length) {
+		return Error('No data found');
+	}
+
+	const dataArray = typeof data === 'string' ? data.split('') : data;
+
+	for (let index = 0; index < dataArray.length; index++) {
+		if (dataArray[index] === value) {
+			return true;
+		}
+	}
+
+	return false;
+};
+
+export { indexOf, includes };
 export default Search;
 
 // EXAMPLE:
