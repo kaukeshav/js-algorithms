@@ -1,0 +1,19 @@
+{
+  "name": "js-algorithms",
+  "version": "1.0.0",
+  "description": "Implementation of searching, sorting, and traversing algorithms using JavaScript (JS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaukeshav/js-algorithms.git"
+  },
+  "author": "Keshav Kaushik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaukeshav/js-algorithms/issues"
+  },
+  "homepage": "https://github.com/kaukeshav/js-algorithms#readme"
+}
