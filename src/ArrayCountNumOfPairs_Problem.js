@@ -4,7 +4,9 @@
  * Count numbers of pairs in character array where 
  * arr[i] = a && arr[j] = b && i < j
  * @param {*} arr 
- * @returns 
+ * @returns {numOfPairs, indexes}
+ * TC - O(n2)
+ * for example arr = ['a', 'a', 'a', 'a'];
  */
 function countNumberOfPairs(arr, a, b) {
    //pair should ['a', 'b'] for this example
