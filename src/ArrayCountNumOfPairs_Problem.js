@@ -1,4 +1,30 @@
+/**
+ *
+ * Count numbers of pairs in character array where 
+ * arr[i] = a && arr[j] = b && i < j 
+ * In this approach we count we are doing reverse of other approach
+ * we are first count number of B's as the total number of pairs
+ * is always number sum of Bs on the right of an "A"
+ * ['a', 'c' 'b']
+ * 
+ * TC: O(n)
+ * SC: O(1)
+ */
+function countNumberOfPairsInN(arr, a, b) {
+    let countOfBs = 0;
+    let totalNumOfPairs = 0;
 
+    for(let k = arr.length - 1; k >= 0; k--) {
+        if(arr[k] === b) {
+            countOfBs++;
+        }
+        if(arr[k] === a) {
+            totalNumOfPairs = totalNumOfPairs + countOfBs;
+        }
+    }
+
+    return totalNumOfPairs
+}
 
 /**
  * Count numbers of pairs in character array where 
@@ -32,3 +58,4 @@ function countNumberOfPairs(arr, a, b) {
 // Run this to count
 // const arr = ['a', 'c', 'g', 'd', 'g', 'a', 'g'];
 // countNumberOfPairs(arr, 'a', 'b')
+// countNumberOfPairsInN(arr, 'a', 'b')
