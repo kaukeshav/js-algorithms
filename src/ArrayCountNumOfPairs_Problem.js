@@ -6,7 +6,6 @@
  * we are first count number of B's as the total number of pairs
  * is always number sum of Bs on the right of an "A"
  * ['a', 'c' 'b']
- * 
  * TC: O(n)
  * SC: O(1)
  */
